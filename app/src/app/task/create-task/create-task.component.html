@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-between task">
+	<form (ngSubmit)="addTask()" #form="ngForm">
+		<input
+			type="text"
+			class="task-title"
+			[placeholder]="placeholder"
+			[formControl]="taskTitle"
+		/>
+	</form>
+	<div class="align-items-center d-flex justify-content-center task-action">
+		<button mat-icon-button (click)="addTask()">
+			<mat-icon>arrow_forward</mat-icon>
+		</button>
+	</div>
+</div>
+<div class="d-flex justify-content-between task-time">
+	<div class="task-time--hours">
+		Hours:
+		<input type="number" [formControl]="hours" />
+	</div>
+	<div class="task-time--minutes">
+		Minutes:
+		<input type="number" [formControl]="minutes" />
+	</div>
+</div>

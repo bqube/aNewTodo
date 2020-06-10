@@ -1,0 +1,40 @@
+.task-item {
+	width: 100%;
+	font-size: 20px;
+	padding: 1rem 0;
+	color: #dadada;
+	&-checkbox {
+		width: 90%;
+		&--checked {
+			color: #999;
+			text-decoration: line-through;
+		}
+	}
+	&:hover {
+		.task-item-action--visible {
+			display: block;
+		}
+	}
+	&-action {
+		font-size: 20px;
+		width: calc(2 * 1em);
+		height: calc(2 * 1em);
+		color: #666666;
+		.mat-icon-button {
+			font-size: inherit;
+			line-height: 1em;
+			mat-icon {
+				width: 1em;
+				height: 1em;
+				font-size: inherit;
+				line-height: 1em;
+			}
+		}
+		&--visible {
+			display: none;
+			:hover > & {
+				color: rgba(255, 255, 255, 0.7019607843137254);
+			}
+		}
+	}
+}

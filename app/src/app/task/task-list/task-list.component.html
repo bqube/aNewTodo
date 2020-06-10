@@ -1,0 +1,24 @@
+<ng-container *ngFor="let task of taskList; index as position; last as isLast">
+	<div
+		class="d-flex justify-content-between align-items-center mb-1 task-item"
+	>
+		<mat-checkbox
+			class="task-item-checkbox"
+			[ngClass]="{ 'task-item-checkbox--checked': task.isCompleted }"
+			[(ngModel)]="task.isCompleted"
+		>
+			{{ task.title }}
+		</mat-checkbox>
+		<div class="task-item-action">
+			<button
+				class="task-item-action--visible"
+				mat-icon-button
+				(click)="deleteTask(task, position)"
+			>
+				<mat-icon>delete</mat-icon>
+			</button>
+		</div>
+	</div>
+	<mat-divider *ngIf="!isLast"></mat-divider>
+</ng-container>
+<app-task-notification></app-task-notification>

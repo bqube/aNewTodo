@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+// body {
+// 	display: flex;
+// 	color: white;
+// 	background: linear-gradient(rgb(49, 50, 51) 0%, rgb(20, 20, 20) 100%);
+// }
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background-color: #1d1e22;
+	color: white;
+	padding: 4rem 0rem;
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.task-item {
+	.mat-checkbox-inner-container {
+		font-size: 20px;
+		width: 1em;
+		height: 1em;
+	}
+	.mat-checkbox-label {
+		white-space: normal;
+	}
+}
