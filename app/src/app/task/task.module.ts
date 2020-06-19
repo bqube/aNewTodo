@@ -12,6 +12,7 @@ import { TaskComponent } from './task.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TaskService } from './task.service';
 import { TaskNotificationComponent } from './task-notification/task-notification.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const matModules = [
 	MatIconModule,
@@ -21,9 +22,15 @@ const matModules = [
 ];
 
 @NgModule({
-	declarations: [CreateTaskComponent, TaskListComponent, TaskComponent, TaskNotificationComponent],
+	declarations: [
+		CreateTaskComponent,
+		TaskListComponent,
+		TaskComponent,
+		TaskNotificationComponent,
+	],
 	imports: [
 		CommonModule,
+		HttpClientModule,
 		TaskRoutingModule,
 		FormsModule,
 		ReactiveFormsModule,

@@ -6,6 +6,7 @@
 			class="task-item-checkbox"
 			[ngClass]="{ 'task-item-checkbox--checked': task.isCompleted }"
 			[(ngModel)]="task.isCompleted"
+			(change)="taskStatusChanges($event, task, position)"
 		>
 			{{ task.title }}
 		</mat-checkbox>

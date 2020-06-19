@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService, TaskDataType } from '../task.service';
+import { MatCheckboxChange } from '@angular/material/checkbox';
 
 @Component({
 	selector: 'app-task-list',
@@ -23,8 +24,21 @@ export class TaskListComponent implements OnInit {
 	}
 
 	deleteTask(task: TaskDataType, position: number): void {
-		console.log(task, position);
 		task.deleted = true;
+		this.taskService.updateTask(task, position);
+	}
+
+	taskStatusChanges(
+		status: MatCheckboxChange,
+		task: TaskDataType,
+		position: number
+	): void {
+		task.isCompleted = status.checked;
+		if (status.checked) {
+			task.completedAt = new Date();
+		} else {
+			task.completedAt = null;
+		}
 		this.taskService.updateTask(task, position);
 	}
 }
