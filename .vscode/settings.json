@@ -1,12 +1,15 @@
 {
-    "git.ignoreLimitWarning": true,
-    "sqltools.connections": [
-        {
-            "database": "${workspaceFolder:ToDo}/api/db.sqlite3",
-            "driver": "SQLite",
-            "name": "ToDo App",
-            "previewLimit": 50
-        }
-    ],
-    "sqltools.useNodeRuntime": true
+	"git.ignoreLimitWarning": true,
+	"sqltools.connections": [
+		{
+			"database": "${workspaceFolder:ToDo}/api/db.sqlite3",
+			"driver": "SQLite",
+			"name": "ToDo App",
+			"previewLimit": 50
+		}
+	],
+	"sqltools.useNodeRuntime": true,
+	"python.formatting.provider": "black",
+	"python.linting.enabled": true,
+	"python.linting.pylintEnabled": true
 }
